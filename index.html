@@ -1,0 +1,266 @@
+ <!DOCTYPE html>
+<html>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+<link href="css/style.css" rel="stylesheet" id="">
+
+
+<head>
+</head>
+
+<body>
+
+<main class="container pt-5">
+
+<div class="card-header"><b>UPnP Contact Book </b></div>
+
+<div class="card-block p-0">
+  <table class="table  table-sm">
+            <thead class="table-info">
+                <tr>
+                    <th>Contacts</th>
+                </tr>
+			</thead>
+            <tbody>
+                <tr>
+
+                    <td id="one" onclick="getKalai()">Kalaiselvi</td>
+
+                </tr>
+                <tr>
+
+                    <td id="two" onclick="getVanathy()">Vanathy</td>
+
+                </tr>
+                <tr>
+
+                    <td id="three" onclick="getKosal()">Kosal Ram</td>
+
+                </tr>
+				<tr>
+
+                    <td id="four" onclick="getVijay()">Vijayakumar</td>
+
+                </tr>
+				<tr>
+
+                    <td id="five" onclick="getRavi()">Ravindran</td>
+
+                </tr>
+				<tr>
+
+                    <td id="six" onclick="getJaya()">Jayalakshmi</td>
+
+                </tr>
+
+            </tbody>
+	</table>		
+</div>
+
+</main>
+ 
+<script>
+
+var myVar;
+var checkCount = 0;
+var Dialer = 0;
+
+window.onload = function(){
+		
+			$.ajax({
+				url: "./php/ContactBookOpen.php",
+				type: "Post",
+				//async : false
+			});
+			//return "Open";
+		};
+
+/*
+
+window.onload = function(){
+		
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // "success";
+            }
+        };
+		xmlhttp.open("POST", "http://www.orexel.com/UPnPContactBook/php/ContactBookOpen.php", true);
+        xmlhttp.send();
+	
+};
+
+*/
+
+window.onbeforeunload = function (){
+		
+			$.ajax({
+				url: "./php/ContactBookClose.php",
+				type: "Post",
+				async : false
+			});
+			//return "disconnected"; 
+			
+		};
+
+
+
+
+/* window.onunload = function(){
+	
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // "success";
+            }
+        };
+		xmlhttp.open("POST", "http://www.orexel.com/UPnPContactBook/php/ContactBookClose.php", true);
+        xmlhttp.send();
+		return;		
+};
+
+*/
+
+
+function addCSS(filename){
+
+ var head = document.getElementsByTagName('head')[0];
+ var style = document.createElement('link');
+ style.href = filename;
+ style.type = 'text/css';
+ style.rel = 'stylesheet';
+ head.append(style);
+ //alert("style1.css loaded");
+ 
+}
+
+function getKalai() {
+
+	window.location.reload();
+	document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	addCSS("css/style1.css");
+	document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> 						<a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"listContacts()\"></span></a> 							<a href=\"javascript:;\"><span id=\"call\" onclick=\"DialPhone(9786218622)\" class=\"lnr lnr-phone-handset\"></span></a> 						</div> 						<h1 class=\"heading\">Kalaiselvi</h1> 							<h3 class=\"location\">Tiruvannamalai, Tamilnadu</h3> 									<p class=\"temp\"> 										<span class=\"temp-value\">+91 9786218622</span> 							 						</p> 				</div> 				</div> 							<div class=\"bottom\"> 					<!-- <div class=\"wrapper\"> 									<ul class=\"forecast\"> 											<a href=\"javascript:;\"><span class=\"lnr lnr-chevron-up go-up\"></span></a> 					<li class=\"active\"> 								<span class=\"date\">Yesterday</span> 					<span class=\"lnr lnr-sun condition\"> 												<span class=\"temp\">23<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 					</span> 							</li> 							<li> 								<span class=\"date\">Tomorrow</span> 					<span class=\"lnr lnr-cloud condition\"> 											<span class=\"temp\">21<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 				</span> 							</li> 							</ul> <button id=\"call\" onclick=\"DialPhone(9786218622)\">CALL</button> <button id=\"back\" onclick=\"listContacts()\">BACK</button>					</div>  -->				</div> 			</div> 		</div>  		 	</div> </div>");
+	
+}
+
+function getVanathy() {
+
+	window.location.reload();
+	document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	addCSS("css/style1.css");	
+	document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\">  				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> 						<a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"listContacts()\"></span></a> 							<a href=\"javascript:;\"><span id=\"call\" onclick=\"DialPhone(9385601970)\" class=\"lnr lnr-phone-handset\"></span></a> 						</div> 			<h1 class=\"heading\">Vanathy</h1> 							<h3 class=\"location\">Tiruvannamalai, Tamilnadu</h3> 									<p class=\"temp\"> 										<span class=\"temp-value\">+91 9385601970</span> 							 						</p> 				</div> 				</div> 							<div class=\"bottom\"> 					<!-- <div class=\"wrapper\"> 									<ul class=\"forecast\"> 											<a href=\"javascript:;\"><span class=\"lnr lnr-chevron-up go-up\"></span></a> 					<li class=\"active\"> 								<span class=\"date\">Yesterday</span> 					<span class=\"lnr lnr-sun condition\"> 												<span class=\"temp\">23<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 					</span> 							</li> 							<li> 								<span class=\"date\">Tomorrow</span> 					<span class=\"lnr lnr-cloud condition\"> 											<span class=\"temp\">21<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 				</span> 							</li> 							</ul> <button id=\"call\" onclick=\"DialPhone(9385601970)\">CALL</button> <button id=\"back\" onclick=\"listContacts()\">BACK</button>					</div>  -->				</div> 			</div> 		</div>  	</div> </div>");
+
+}
+
+function getKosal() {
+
+	window.location.reload();
+	document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	addCSS("css/style1.css");	
+	document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> 						<a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"listContacts()\"></span></a> 							<a href=\"javascript:;\"><span id=\"call\" onclick=\"DialPhone(9500890636)\" class=\"lnr lnr-phone-handset\"></span></a> 						</div> 						<h1 class=\"heading\">Kosal Ram</h1> 							<h3 class=\"location\">Chennai, TamilNadu</h3> 									<p class=\"temp\"> 										<span class=\"temp-value\">+91 9500890636</span> 							 						</p> 				</div> 				</div> 							<div class=\"bottom\"> 					<!-- <div class=\"wrapper\"> 									<ul class=\"forecast\"> 											<a href=\"javascript:;\"><span class=\"lnr lnr-chevron-up go-up\"></span></a> 					<li class=\"active\"> 								<span class=\"date\">Yesterday</span> 					<span class=\"lnr lnr-sun condition\"> 												<span class=\"temp\">23<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 					</span> 							</li> 							<li> 								<span class=\"date\">Tomorrow</span> 					<span class=\"lnr lnr-cloud condition\"> 											<span class=\"temp\">21<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 				</span> 							</li> 							</ul> <button id=\"call\" onclick=\"DialPhone(9500890636)\">CALL</button> <button id=\"back\" onclick=\"listContacts()\">BACK</button>					</div>  -->				</div> 			</div> 		</div>  		 	</div> </div>");
+
+}
+
+function getVijay() {
+
+	window.location.reload();
+	document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	addCSS("css/style1.css");	
+	document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> 						<a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"listContacts()\"></span></a> 							<a href=\"javascript:;\"><span id=\"call\" onclick=\"DialPhone(9486564158)\" class=\"lnr lnr-phone-handset\"></span></a> 						</div> 						<h1 class=\"heading\">Vijayakumar</h1> 							<h3 class=\"location\">Puducherry, Puducherry</h3> 									<p class=\"temp\"> 										<span class=\"temp-value\">+91 9486564158</span> 							 						</p> 				</div> 				</div> 							<div class=\"bottom\"> 					<!-- <div class=\"wrapper\"> 									<ul class=\"forecast\"> 											<a href=\"javascript:;\"><span class=\"lnr lnr-chevron-up go-up\"></span></a> 					<li class=\"active\"> 								<span class=\"date\">Yesterday</span> 					<span class=\"lnr lnr-sun condition\"> 												<span class=\"temp\">23<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 					</span> 							</li> 							<li> 								<span class=\"date\">Tomorrow</span> 					<span class=\"lnr lnr-cloud condition\"> 											<span class=\"temp\">21<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 				</span> 							</li> 							</ul> <button id=\"call\" onclick=\"DialPhone(9486564158)\">CALL</button> <button id=\"back\" onclick=\"listContacts()\">BACK</button>					</div>  -->				</div> 			</div> 		</div>  		 	</div> </div>");
+
+}
+
+function getRavi() {
+
+	window.location.reload();
+	document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	addCSS("css/style1.css");
+	document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> 						<a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"listContacts()\"></span></a> 							<a href=\"javascript:;\"><span id=\"call\" onclick=\"DialPhone(9715697986)\" class=\"lnr lnr-phone-handset\"></span></a> 						</div> 						<h1 class=\"heading\">Ravindran</h1> 							<h3 class=\"location\">Tiruvannamalai, Tamil Nadu</h3> 									<p class=\"temp\"> 										<span class=\"temp-value\">+91 9715697986</span> 							 						</p> 				</div> 				</div> 							<div class=\"bottom\"> 					<!-- <div class=\"wrapper\"> 									<ul class=\"forecast\"> 											<a href=\"javascript:;\"><span class=\"lnr lnr-chevron-up go-up\"></span></a> 					<li class=\"active\"> 								<span class=\"date\">Yesterday</span> 					<span class=\"lnr lnr-sun condition\"> 												<span class=\"temp\">23<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 					</span> 							</li> 							<li> 								<span class=\"date\">Tomorrow</span> 					<span class=\"lnr lnr-cloud condition\"> 											<span class=\"temp\">21<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 				</span> 							</li> 							</ul> <button id=\"call\" onclick=\"DialPhone(9715697986)\">CALL</button> <button id=\"back\" onclick=\"listContacts()\">BACK</button>					</div>  -->				</div> 			</div> 		</div>  		 	</div> </div>");
+
+}
+
+function getJaya() {
+
+	window.location.reload();
+	document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	addCSS("css/style1.css");
+	document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> 						<a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"listContacts()\"></span></a> 							<a href=\"javascript:;\"><span id=\"call\" onclick=\"DialPhone(9791232627)\" class=\"lnr lnr-phone-handset\"></span></a> 						</div> 						<h1 class=\"heading\">Jayalakshmi</h1> 							<h3 class=\"location\">Puducherry, Puducherry</h3> 									<p class=\"temp\"> 										<span class=\"temp-value\">+91 9791232627</span> 							 						</p> 				</div> 				</div> 							<div class=\"bottom\"> 					<!-- <div class=\"wrapper\"> 									<ul class=\"forecast\"> 											<a href=\"javascript:;\"><span class=\"lnr lnr-chevron-up go-up\"></span></a> 					<li class=\"active\"> 								<span class=\"date\">Yesterday</span> 					<span class=\"lnr lnr-sun condition\"> 												<span class=\"temp\">23<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 					</span> 							</li> 							<li> 								<span class=\"date\">Tomorrow</span> 					<span class=\"lnr lnr-cloud condition\"> 											<span class=\"temp\">21<span class=\"deg\">0</span><span class=\"temp-type\">C</span></span> 				</span> 							</li> 							</ul> <button id=\"call\" onclick=\"DialPhone(9791232627)\">CALL</button> <button id=\"back\" onclick=\"listContacts()\">BACK</button>					</div>  -->				</div> 			</div> 		</div>  		 	</div> </div>");
+
+}
+
+function listContacts() {
+	
+	window.location.reload();
+	
+}
+
+function DialPhone(phonenumber) {
+	
+	var xmlhttp1 = new XMLHttpRequest();
+    xmlhttp1.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+                // "success";
+				//DialerStatus();
+				myVar = setInterval(function(){ DialerStatus()}, 5000);
+				//document.write("function called");
+       }
+    };
+	//document.write(phonenumber);
+    xmlhttp1.open("POST", "./php/PhoneDialNumber.php?phoneno="+phonenumber, true);
+	xmlhttp1.send();
+	
+}
+
+function DialerStatus() {
+  
+		//myVar = setInterval(function(){ DialerStatus()}, 10000);
+		var xmlhttp2 = new XMLHttpRequest();
+		xmlhttp2.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+				// "success";
+               	Dialer = xmlhttp2.response;
+				//document.write(Dialer);
+				//Search Window for Apps in the local network
+				DialerStatusCheck();
+			}	
+	    };
+		xmlhttp2.open("GET", "./php/PhoneDialerCheck.php",true);
+		//document.write(phonenumber);
+		xmlhttp2.send();
+		      		
+ }
+ 
+ function DialerStatusCheck() {
+		document.write(Dialer);
+		
+		if (Dialer == 1) {
+			//clearInterval(myVar);
+			//checkCount = 0;
+			document.body.innerHTML ="";
+			document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+			addCSS("css/style1.css");
+			document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> <a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"clearInterval(myVar); listContacts(); \"></span></a> 	<h1 class=\"heading2\">UPnP APPs in this network</h1>	<br/>											<a href=\"javascript:;\"><span id=\"call\" onclick=\"alert('Dialing this number on UPnP Phone Dialer!')\">UPnP Phone Dialer APP\ </span></a> 						</div> 						 											</div> 				</div> 							<div class=\"bottom\"> 								</div> 			</div> 		</div>  		 	</div> </div>");
+	    }  
+		else {
+			document.body.innerHTML ="";
+			document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+			addCSS("css/style1.css");
+			document.write("<div class=\"container\"> 	<div class=\"row\"> 	<div class=\"col\"> 			<div class=\"weather-card one\"> 		<div class=\"top\"> 					<div class=\"wrapper\"> 			<div class=\"mynav\"> <a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"clearInterval(myVar); listContacts();\"></span></a> 	<h1 class=\"heading2\">Searching for APPs...</h1> <br/>	<p>No UPnP Apps in this network</p>												</div> 						 											</div> 				</div> 				<div class=\"bottom\"> 								</div> 			</div> 		</div>  		 	</div> </div>");
+		}
+		//checkCount = checkCount + 1;
+		//document.write(Dialer);
+		//if (checkCount == 50) {
+		//	clearInterval(myVar);
+		//	checkCount = 0;
+		//}	
+		
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="style_nu.css" rel="stylesheet" id="">
+<link href="css_nu.css" rel="stylesheet" id="bootstrap-css">
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- <a href="http://bootsnipp.com/mouse0270/snippets/4l0k2" class="btn btn-danger hide" id="back-to-bootsnipp">Back to Bootsnipp</a> -->
+
+<div class="container">
+	<!-- 
+    <div class="row">
+        <h3>Developer Question</h3>
+        <p>Can anyone tell me why this snippet flashes after the tooltip is removed from the DOM? It is driving me crazy!</p>
+        <hr/>
+        <h3>Developer Answer</h3>
+        <p>It appears that tooltips do not like to be removed from within an <code>iframe</code> and cause the page to <em><strong>flash</strong></em>. If you are experiencing this issue with the tooltips please <a id="fullscreen" href="#fullscreen">click here</a> to view this snippet in an iframe.</p>
+    </div>
+    
+    <div class="row form-group">
+        <h3>Onwards to the snippet!</h3>
+        <p>This snippet is a minimal contact list that allows you to search for anyone in the list by name, location, phone number or email.</p>
+        <p> Give it a shot search for <code>s@</code> and you'll get everyone whos last character in their email is <code>S</code></p>
+        <p> Or search for <code>Ln</code> and you'll get everyone whos location is a <code>Lane</code> rather than a <code>Street</code> or <code>Drive</code>.</p>
+        <p> Or search for <code>22</code> and you'll get everyone whos phone number or location has a <code>22</code> in it.</p>
+        <hr/>
+    </div> -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+            <div class="panel panel-default">
+			<span class="title1">UPnP Contact Book APP</span>
+                <div class="panel-heading c-list">
+                    <span class="title">Contacts</span>
+                    <ul class="pull-right c-controls">
+                        <!-- <li><a href="#cant-do-all-the-work-for-you" data-toggle="tooltip" data-placement="top" title="Add Contact"><i class="glyphicon glyphicon-plus"></i></a></li> -->
+                        <li><a href="#" class="hide-search" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-ellipsis-v"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="row" style="display: none;">
+                    <div class="col-xs-12">
+                        <div class="input-group c-search">
+                            <input type="text" class="form-control" id="contact-list-search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="list-group" id="contact-list">
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="female_128.png" alt="Scott Stevens" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Kalaiselvi</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5842 Hillcrest Rd"></span>
+                            <span class="visible-xs"> <span class="text-muted">5842 Hillcrest Rd</span><br/></span>
+                           <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="978 621 8622"onclick="DialPhone(9786218622);" ></span>
+                            <span class="visible-xs"> <span class="text-muted" onclick="DialPhone(9786218622)">9786218622</span><br/></span>
+							</span>
+                            <span class="fa fa-envelope text-muted c-info" data-toggle="tooltip" title="Kalaiselvi@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">kalaiselvi@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="female_128.png" alt="Seth Frazier" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Vanathy</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="7396 E North St"></span>
+                            <span class="visible-xs"> <span class="text-muted">7396 E North St</span><br/></span>
+                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="938 560 1970"onclick="DialPhone(9385601970)"></span>
+                            <span class="visible-xs"> <span class="text-muted" onclick="DialPhone(9385601970)">938 560 1970</span><br/></span>
+                            <span class="fa fa-envelope text-muted c-info" data-toggle="tooltip" title="vanathy@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">vanathy@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="male_128.png" alt="Jean Myers" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Kosal Ram</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="4949 W Dallas St"></span>
+                            <span class="visible-xs"> <span class="text-muted">4949 W Dallas St</span><br/></span>
+                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="950 089 0636"onclick="DialPhone(9500890636)"></span>
+                            <span class="visible-xs"> <span class="text-muted" onclick="DialPhone(9500890636)">950 089 0636</span><br/></span>
+                            <span class="fa fa-envelope text-muted c-info" data-toggle="tooltip" title="kosal.ram@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">kosal.ram@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="male_128.png" alt="Todd Shelton" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Vijayakumar</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5133 Pecan Acres Ln"></span>
+                            <span class="visible-xs"> <span class="text-muted">5133 Pecan Acres Ln</span><br/></span>
+                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="948 656 4158"onclick="DialPhone(9486564158)"></span>
+                            <span class="visible-xs"> <span class="text-muted" onclick="DialPhone(9486564158)">948 656 4158</span><br/></span>
+                            <span class="fa fa-envelope	 text-muted c-info" data-toggle="tooltip" title="todd.shelton@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">vijayakumar@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="male_128.png" alt="Rosemary Porter" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Ravindran</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5267 Cackson St"></span>
+                            <span class="visible-xs"> <span class="text-muted">5267 Cackson St</span><br/></span>
+                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="971 569 7986"onclick="DialPhone(9715697986)"></span>
+                            <span class="visible-xs"> <span class="text-muted" onclick="DialPhone(9715697986)">971 569 7986</span><br/></span>
+                            <span class="fa fa-comments text-muted c-info" data-toggle="tooltip" title="rosemary.porter@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">ravindran@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="female_128.png" alt="Debbie Schmidt" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Jayalakshmi</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="3903 W Alexander Rd"></span>
+                            <span class="visible-xs"> <span class="text-muted">3903 W Alexander Rd</span><br/></span>
+							<span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="979 123 2627"onclick="DialPhone(9791232627)"></span>
+                            <span class="visible-xs"> <span class="text-muted" onclick="DialPhone(9791232627)">979 123 2627</span><br/></span>
+                            <span class="fa fa-comments text-muted c-info" data-toggle="tooltip" title="debbie.schmidt@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">jayalakshmi@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <!-- <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="http://api.randomuser.me/portraits/women/76.jpg" alt="Glenda Patterson" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Glenda Patterson</span><br/>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5020 Poplar Dr"></span>
+                            <span class="visible-xs"> <span class="text-muted">5020 Poplar Dr</span><br/></span>
+                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="(538) 718-7548"></span>
+                            <span class="visible-xs"> <span class="text-muted">(538) 718-7548</span><br/></span>
+                            <span class="fa fa-comments text-muted c-info" data-toggle="tooltip" title="glenda.patterson@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">glenda.patterson@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+	</div>
+  <!--
+    <div id="cant-do-all-the-work-for-you" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="mySmallModalLabel">Ooops!!!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>I am being lazy and do not want to program an "Add User" section into this snippet... So it looks like you'll have to do that for yourself.</p><br/>
+                    <p><strong>Sorry<br/>
+                    ~ Mouse0270</strong></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- JavaScrip Search Plugin -->
+	
+	<script>
+	function DialPhone(phonenumber) {
+	alert(phonenumber);
+	/*
+	var xmlhttp1 = new XMLHttpRequest();
+    xmlhttp1.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+                // "success";
+				DialerStatus();
+				//document.write("function called");
+       }
+    };
+	//document.write(phonenumber);
+    xmlhttp1.open("POST", "./php/PhoneDialNumber.php?phoneno="+phonenumber, true);
+	xmlhttp1.send();
+	*/
+}
+
+ function DialerStatusCheck() {
+		document.write(Dialer);
+		
+		if (Dialer == 1) {
+			//clearInterval(myVar);
+			//checkCount = 0;
+			document.body.innerHTML ="";
+			document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+			addCSS("css/style1.css");
+			document.write("<div class=\"container\"> 	<div class=\"row\"> 		<div class=\"col\"> 			<div class=\"weather-card one\"> 				<div class=\"top\"> 					<div class=\"wrapper\"> 						<div class=\"mynav\"> <a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"clearInterval(myVar); listContacts(); \"></span></a> 	<h1 class=\"heading2\">UPnP APPs in this network</h1>	<br/>											<a href=\"javascript:;\"><span id=\"call\" onclick=\"alert('Dialing this number on UPnP Phone Dialer!')\">UPnP Phone Dialer APP\ </span></a> 						</div> 						 											</div> 				</div> 							<div class=\"bottom\"> 								</div> 			</div> 		</div>  		 	</div> </div>");
+	    }  
+		else {
+			document.body.innerHTML ="";
+			document.write("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+			addCSS("css/style1.css");
+			document.write("<div class=\"container\"> 	<div class=\"row\"> 	<div class=\"col\"> 			<div class=\"weather-card one\"> 		<div class=\"top\"> 					<div class=\"wrapper\"> 			<div class=\"mynav\"> <a  href=\"\"><span class=\"lnr lnr-chevron-left\" id=\"back\" onclick=\"clearInterval(myVar); listContacts();\"></span></a> 	<h1 class=\"heading2\">Searching for APPs...</h1> <br/>	<p>No UPnP Apps in this network</p>												</div> 						 											</div> 				</div> 				<div class=\"bottom\"> 								</div> 			</div> 		</div>  		 	</div> </div>");
+		}
+		//checkCount = checkCount + 1;
+		//document.write(Dialer);
+		//if (checkCount == 50) {
+		//	clearInterval(myVar);
+		//	checkCount = 0;
+		//}	
+		
+}
+
+
+	</script>
+	
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="js_nu.js"></script>
+	
+    
+</div>
